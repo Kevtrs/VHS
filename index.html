@@ -1081,6 +1081,294 @@ button:active{
   background:#050505;
 }
 
+
+/* ══════════════════════════════════════
+   TABLETTE — iPad portrait + paysage
+══════════════════════════════════════ */
+
+@media (min-width: 768px) {
+  .app {
+    width: min(100%, 900px);
+    padding: calc(16px + var(--safe-top)) 24px calc(16px + var(--safe-bottom));
+    gap: 12px;
+  }
+
+  .logo {
+    font-size: clamp(48px, 7vw, 68px);
+    letter-spacing: 10px;
+  }
+
+  .subtitle {
+    font-size: 10px;
+    letter-spacing: 3px;
+  }
+
+  .save-pill {
+    font-size: 9px;
+    padding: 8px 12px;
+  }
+
+  .card {
+    padding: 14px;
+  }
+
+  .label {
+    font-size: 13px;
+    letter-spacing: 4px;
+  }
+
+  .vcr-line {
+    padding: 7px 10px;
+    margin-bottom: 10px;
+  }
+
+  .ritual-hp span {
+    font-size: 58px;
+  }
+
+  .ritual-hp small {
+    font-size: 13px;
+  }
+
+  .ritual-hp::before {
+    font-size: 100px;
+  }
+
+  .ritual-buttons {
+    grid-template-columns: 60px 60px;
+    gap: 10px;
+  }
+
+  .ritual-buttons button {
+    min-height: 60px;
+    font-size: 28px;
+  }
+
+  .token {
+    min-height: 44px;
+    font-size: 13px;
+  }
+
+  .token.progress.active::after,
+  .token.shield.active::after {
+    font-size: 26px;
+  }
+
+  .mini-label {
+    font-size: 9px;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+  }
+
+  .tokens {
+    gap: 8px;
+  }
+
+  .section-row span {
+    font-size: 13px;
+    letter-spacing: 4px;
+  }
+
+  .players {
+    gap: 12px;
+  }
+
+  .player {
+    padding: 12px;
+    gap: 6px;
+  }
+
+  .name-button {
+    font-size: 15px;
+    letter-spacing: 2px;
+  }
+
+  .player-role {
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  .player-hp strong {
+    font-size: 48px;
+  }
+
+  .player-hp span {
+    font-size: 11px;
+  }
+
+  .player-actions button {
+    min-height: 52px;
+    font-size: 26px;
+  }
+
+  button {
+    min-height: 50px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    padding: 12px 10px;
+  }
+
+  .control-bar {
+    padding-top: 12px;
+    gap: 10px;
+  }
+
+  .toast {
+    font-size: 12px;
+    letter-spacing: 4px;
+    padding: 12px 18px;
+    bottom: calc(90px + var(--safe-bottom));
+  }
+
+  .corner-deco {
+    width: 52px;
+    height: 52px;
+    opacity: 0.25;
+  }
+}
+
+/* iPad paysage — on garde le layout vertical mais on utilise mieux l'espace */
+@media (min-width: 1024px) {
+  .app {
+    width: min(100%, 1100px);
+    grid-template-rows: auto auto minmax(0,1fr) auto;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: calc(16px + var(--safe-top)) 32px calc(16px + var(--safe-bottom));
+  }
+
+  .logo {
+    font-size: clamp(52px, 5.5vw, 76px);
+  }
+
+  .ritual {
+    /* Rituel plus compact en hauteur pour laisser de la place aux joueurs */
+  }
+
+  .ritual-hp span {
+    font-size: 64px;
+  }
+
+  .ritual-hp::before {
+    font-size: 120px;
+  }
+
+  .ritual-buttons {
+    grid-template-columns: 68px 68px;
+  }
+
+  .ritual-buttons button {
+    min-height: 68px;
+    font-size: 32px;
+  }
+
+  /* Joueurs en 4 colonnes en paysage */
+  .players {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 12px;
+  }
+
+  .player-hp strong {
+    font-size: 52px;
+  }
+
+  .player-actions button {
+    min-height: 56px;
+    font-size: 28px;
+  }
+
+  .tokens {
+    gap: 10px;
+  }
+
+  .token {
+    min-height: 48px;
+  }
+
+  .control-bar {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 12px;
+    padding-top: 14px;
+  }
+
+  button {
+    min-height: 52px;
+    font-size: 12px;
+  }
+
+  .corner-deco {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+/* ══════════════════════════════════════
+   TABLETTE — iPad portrait + paysage
+══════════════════════════════════════ */
+
+@media (min-width: 768px) {
+  .app {
+    width: min(100%, 900px);
+    padding: calc(16px + var(--safe-top)) 24px calc(16px + var(--safe-bottom));
+    gap: 12px;
+  }
+  .logo { font-size: clamp(48px,7vw,68px); letter-spacing:10px; }
+  .subtitle { font-size:10px; letter-spacing:3px; }
+  .save-pill { font-size:9px; padding:8px 12px; }
+  .card { padding:14px; }
+  .label { font-size:13px; letter-spacing:4px; }
+  .vcr-line { padding:7px 10px; margin-bottom:10px; }
+  .ritual-hp span { font-size:58px; }
+  .ritual-hp small { font-size:13px; }
+  .ritual-hp::before { font-size:100px; }
+  .ritual-buttons { grid-template-columns:60px 60px; gap:10px; }
+  .ritual-buttons button { min-height:60px; font-size:28px; }
+  .token { min-height:44px; font-size:13px; }
+  .token.progress.active::after, .token.shield.active::after { font-size:26px; }
+  .mini-label { font-size:9px; letter-spacing:3px; margin-bottom:8px; }
+  .tokens { gap:8px; }
+  .section-row span { font-size:13px; letter-spacing:4px; }
+  .players { gap:12px; }
+  .player { padding:12px; gap:6px; }
+  .name-button { font-size:15px; letter-spacing:2px; }
+  .player-role { font-size:9px; letter-spacing:2px; }
+  .player-hp strong { font-size:48px; }
+  .player-hp span { font-size:11px; }
+  .player-actions button { min-height:52px; font-size:26px; }
+  button { min-height:50px; font-size:11px; letter-spacing:2px; padding:12px 10px; }
+  .control-bar { padding-top:12px; gap:10px; }
+  .toast { font-size:12px; letter-spacing:4px; padding:12px 18px; bottom:calc(90px + var(--safe-bottom)); }
+  .corner-deco { width:52px; height:52px; opacity:0.25; }
+}
+
+@media (min-width: 1024px) {
+  .app {
+    width: min(100%, 1100px);
+    grid-template-rows: auto auto minmax(0,1fr) auto;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: calc(16px + var(--safe-top)) 32px calc(16px + var(--safe-bottom));
+  }
+  .logo { font-size:clamp(52px,5.5vw,76px); }
+  .ritual-hp span { font-size:64px; }
+  .ritual-hp::before { font-size:120px; }
+  .ritual-buttons { grid-template-columns:68px 68px; }
+  .ritual-buttons button { min-height:68px; font-size:32px; }
+  .players {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 12px;
+  }
+  .player-hp strong { font-size:52px; }
+  .player-actions button { min-height:56px; font-size:28px; }
+  .tokens { gap:10px; }
+  .token { min-height:48px; }
+  .control-bar { grid-template-columns:1fr 1fr 1fr 1fr; gap:12px; padding-top:14px; }
+  button { min-height:52px; font-size:12px; }
+  .corner-deco { width:64px; height:64px; }
+}
+
 </style>
 </head>
 
